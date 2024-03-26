@@ -1,5 +1,6 @@
 #include <fstream>
 #include <iostream>
+#include <iomanip>
 
 int main()
 {
@@ -32,7 +33,7 @@ int main()
                 x = (3./4.)*x - 7./4.;                     // si usa una mappa lineare per mappare i valori nell'intervallo [-1;2]
                 y = y + x;
                 double mean = y/N;
-                ofs << N << " " << scientific << mean << "\n";      // stampa il valore della media in una nuova riga del file di output
+                ofs << static_cast<int>(N) << " " << scientific << mean << "\n";      // stampa il valore della media in una nuova riga del file di output
             }
         }
 
